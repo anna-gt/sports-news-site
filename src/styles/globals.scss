@@ -1,0 +1,23 @@
+@import "reset";
+@import "variables";
+@import "mixins";
+
+:root {
+  font-family: $font-family;
+}
+
+.container {
+  width: 100%;
+  max-width: $breakpoint-desktop;
+  margin: 0 auto;
+  padding: 0 $container-padding;
+
+  @include tablet {
+    max-width: $breakpoint-tablet;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    padding: 0 15px;
+  }
+}

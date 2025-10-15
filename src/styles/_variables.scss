@@ -1,0 +1,50 @@
+$primary-red: #F01B0D;
+$primary-black: #000000;
+$primary-white: #ffffff;
+$text-light: rgba(0, 0, 0, 0.6);
+
+$font-family: 'Roboto Flex', sans-serif;
+
+$breakpoint-mobile: 320px;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1200px;
+$breakpoint-large: 1920px;
+
+$container-padding: 20px;
+$section-padding: 60px;
+
+$font-sizes: (
+  desktop: (
+    menu: 12px,
+    hero-title: 40px,
+    hero-subtitle: 12px,
+    sports-bar: 14px,
+    section-title: 18px,
+    news-title: 26px,
+    news-content: 20px,
+    news-date: 12px,
+    news-tag: 11px
+  ),
+  tablet: (
+    menu: 12px,
+    hero-title: 40px,
+    hero-subtitle: 12px,
+    sports-bar: 14px,
+    section-title: 18px,
+    news-title: 26px,
+    news-content: 16px,
+    news-date: 12px,
+    news-tag: 11px
+  ),
+  mobile: (
+    menu: 12px,
+    hero-title: 20px,
+    hero-subtitle: 12px,
+    sports-bar: 14px,
+    section-title: 18px,
+    news-title: 16px,
+    news-content: 14px,
+    news-date: 11px,
+    news-tag: 11px
+  )
+);

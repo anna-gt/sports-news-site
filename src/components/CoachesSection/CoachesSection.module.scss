@@ -1,0 +1,57 @@
+@import '../../styles/variables';
+@import '../../styles/mixins';
+
+.coachesSection {
+  padding: 80px 0;
+  background-color: $primary-white;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @include tablet {
+    max-width: 768px;
+    padding: 0 15px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 30px;
+
+  @include tablet {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+
+  @include mobile {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    padding-bottom: 10px;
+    
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+}

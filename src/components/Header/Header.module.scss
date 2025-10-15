@@ -1,0 +1,47 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  padding: 20px 0;
+  background: transparent;
+
+  @include tablet {
+    padding: 15px 0;
+  }
+
+  @include mobile {
+    padding: 10px 0;
+  }
+
+  .headerContainer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+
+    @include tablet {
+      padding: 0 15px;
+    }
+
+    @include mobile {
+      padding: 0 10px;
+    }
+
+    .navWrapper {
+      display: flex;
+      gap: 50px;
+
+      .buttonWrapper {
+        display: flex;
+        align-items: center;
+      }
+    }
+  }
+}

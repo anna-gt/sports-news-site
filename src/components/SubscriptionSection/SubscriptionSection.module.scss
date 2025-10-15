@@ -1,0 +1,173 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.subscriptionSection {
+  padding: 80px 0;
+  background-color: $primary-white;
+
+  @include tablet {
+    padding: 60px 0;
+  }
+
+  @include mobile {
+    padding: 40px 0;
+  }
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+
+  @include tablet {
+    max-width: 768px;
+    padding: 10px;
+  }
+
+  @include mobile {
+    max-width: 100%;
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 60px;
+  align-items: start;
+
+  @include tablet {
+    gap: 20px;
+  }
+
+  @include mobile {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+}
+
+.blockTitle {
+  @include responsive-font(section-title);
+  font-family: $font-family;
+  font-weight: 400;
+  line-height: 100%;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  color: $primary-black;
+
+  @include tablet {
+    margin-bottom: 25px;
+  }
+
+  @include mobile {
+    margin-bottom: 20px;
+    margin-left: 15px;
+  }
+}
+
+.socialBlock {
+  width: 680px;
+
+  @include tablet {
+    width: 490px;
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+
+  .socialIcons {
+    height: 180px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    background-color: $primary-red;
+
+    @include mobile {
+      gap: 15px;
+      padding: 48px 38px;
+    }
+
+    .socialIcon {
+      cursor: pointer;
+    }
+  }
+}
+
+.subscriptionBlock {
+  .subscriptionForm {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    max-width: 680px;
+    background-color: $primary-black;
+    height: 180px;
+    padding: 70px 40px;
+    width: 680px;
+
+    @include tablet {
+      width: 225px;
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+    }
+
+    @include mobile {
+      flex-direction: column;
+      justify-content: center;
+      gap: 12px;
+      width: 100%;
+      min-width: 100vw;
+    }
+
+    .emailInput {
+      background-color: $primary-black;
+      flex: 1;
+      padding: 15px 20px;
+      border-top: none;
+      border-left: none;
+      border-right: none;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+      font-family: $font-family;
+      font-size: 16px;
+      outline: none;
+      transition: border-color 0.3s ease;
+
+      &:focus {
+        border-color: $primary-red;
+      }
+
+      @include mobile {
+        padding: 12px 16px;
+        font-size: 14px;
+      }
+    }
+
+    .subscribeButton {
+      width: 201px;
+      height: 40px;
+      padding: 13px 52px;
+      background-color: $primary-red;
+      color: $primary-white;
+      border: none;
+      border-radius: 50px;
+      font-family: $font-family;
+      font-size: 12px;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      white-space: nowrap;
+
+      @include hover-supported {
+        &:hover {
+          background-color: darken($primary-red, 10%);
+        }
+      }
+
+      @include mobile {
+        padding: 12px 24px;
+        font-size: 14px;
+      }
+    }
+  }
+}

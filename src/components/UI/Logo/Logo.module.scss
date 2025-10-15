@@ -1,0 +1,42 @@
+@import "../../../styles/variables";
+@import "../../../styles/mixins";
+
+.logo {
+  font-family: "Millimetre", sans-serif;
+  font-weight: 800;
+  font-size: 20px;
+  line-height: 100%;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  transform: skew(-10deg);
+
+  @include tablet {
+    font-size: 18px;
+  }
+
+  @include mobile {
+    font-size: 16px;
+  }
+}
+
+.red-white {
+  .sport {
+    color: $primary-red;
+  }
+
+  .hub {
+    color: $primary-white;
+  }
+}
+
+.white-only {
+  .sport {
+    color: $primary-white;
+  }
+
+  .hub {
+    color: $primary-white;
+    opacity: 0.9;
+  }
+}

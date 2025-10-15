@@ -1,0 +1,94 @@
+@import "../../styles/variables";
+@import "../../styles/mixins";
+
+.banner {
+  position: relative;
+  height: 536px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: $primary-white;
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include tablet {
+    height: 350px;
+  }
+
+  @include mobile {
+    height: 300px;
+  }
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    rgba(0, 0, 0, 0.4) 0%,
+    rgba(0, 0, 0, 0.6) 100%
+  );
+  z-index: 1;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  max-width: 800px;
+  padding: 0 20px;
+  z-index: 2;
+  position: relative;
+
+  @include tablet {
+    padding: 0 140px;
+  }
+}
+
+.tag {
+    @include responsive-font(hero-subtitle);
+    font-family: $font-family;
+    font-weight: 400;
+    line-height: 100%;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 16px;
+    opacity: 0.9;
+  }
+
+  .title {
+    @include responsive-font(hero-title);
+    font-family: $font-family;
+    font-weight: 700;
+    line-height: 45px;
+    margin: 0;
+
+    @include tablet {
+      line-height: 38px;
+    }
+
+    @include mobile {
+      line-height: 28px;
+    }
+  }
+
+  .subtitle {
+  @include responsive-font(news-content);
+  font-family: $font-family;
+  font-weight: 300;
+  line-height: 25px;
+  color: rgba($primary-white, 0.6);
+  
+  @include tablet {
+    line-height: 22px;
+  }
+  
+  @include mobile {
+    line-height: 20px;
+  }
+}
